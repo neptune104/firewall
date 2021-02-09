@@ -1,3 +1,8 @@
+## 기존 전체 
+iptables -F
+
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
+
 ###### Access Rules ETC
 iptables -I INPUT -s 220.70.71.231/32 -j ACCEPT
 iptables -I INPUT -s 110.45.156.0/24 -j ACCEPT
